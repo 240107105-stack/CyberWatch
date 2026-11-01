@@ -1,0 +1,57 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>CyberWatch — отчёт аналитика</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#edf2f6;color:#152336;font:15px/1.55 system-ui,sans-serif}
+main{max-width:1200px;margin:36px auto;padding:32px;background:white;border:1px solid #d4dde5;border-radius:16px}
+header{border-bottom:3px solid #1b8b71;padding-bottom:20px}h1{margin:0;font-size:32px}h2{margin:32px 0 12px;font-size:22px}
+h3{margin:0 0 12px;font-size:18px}.eyebrow{color:#18755f;font-weight:700;letter-spacing:2px;font-size:12px}.muted{color:#526477}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}.stat{padding:16px;background:#f1f6f8;border-radius:10px}
+.stat strong{display:block;font-size:30px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:10px 12px;border-bottom:1px solid #dce4eb;text-align:left;vertical-align:top;white-space:pre-wrap;overflow-wrap:anywhere}
+th{background:#edf3f7;color:#344a61}tr:nth-child(even){background:#f9fbfc}.alert{border:1px solid #d4dde5;border-radius:12px;padding:20px;margin:16px 0;break-inside:avoid}
+.description{white-space:pre-wrap;overflow-wrap:anywhere}.label{display:inline-block;padding:3px 9px;background:#edf3f7;border-radius:20px;font-size:12px;margin-right:6px}
+footer{border-top:1px solid #dce4eb;margin-top:32px;padding-top:16px;font-size:12px;color:#526477}
+@media(max-width:700px){main{margin:0;padding:18px;border:0;border-radius:0}.stats{grid-template-columns:repeat(2,1fr)}}
+@media print{body{background:white}main{border:0;margin:0;padding:0;max-width:none}.table-wrap{overflow:visible}h2{break-after:avoid}}
+</style></head><body><main><header><div class="eyebrow">CYBERWATCH · LOCAL SIEM</div>
+<h1>Отчёт аналитика</h1>
+<p class="muted">Сформирован: 02.11.2026 01:15:20 · Локальное время компьютера</p></header>
+<section class="stats"><div class="stat"><span>Событий</span><strong>21</strong></div><div class="stat"><span>Сигналов</span><strong>3</strong></div><div class="stat"><span>Открытых сигналов</span><strong>3</strong></div><div class="stat"><span>IP-источников</span><strong>4</strong></div></section>
+<h2>Сводка по правилам</h2>
+<div class="table-wrap"><table><thead><tr><th>Правило</th><th>Приоритет</th><th>Статус</th><th>Количество</th></tr></thead><tbody><tr><td>Login After Failures</td><td>HIGH</td><td>OPEN</td><td>1</td></tr><tr><td>Port Scan</td><td>HIGH</td><td>OPEN</td><td>1</td></tr><tr><td>SSH Brute Force</td><td>HIGH</td><td>OPEN</td><td>1</td></tr></tbody></table></div>
+<h2>Настройки анализа</h2><p class="muted">Сохранённые настройки на момент экспорта. Описание каждого сигнала содержит параметры его обнаружения.</p>
+<div class="table-wrap"><table><thead><tr><th>Параметр</th><th>Значение</th></tr></thead><tbody><tr><td colspan="2" class="muted">Записей нет</td></tr></tbody></table></div>
+<h2>Источники событий</h2><p class="muted">Классификация IP отражает область адресации. Геолокация и репутация адресов в этом отчёте не определяются.</p>
+<div class="table-wrap"><table><thead><tr><th>IP</th><th>Область адресации</th><th>Событий</th><th>Первое событие</th><th>Последнее событие</th></tr></thead><tbody><tr><td>198.51.100.23</td><td>Документационный адрес (демо)</td><td>12</td><td>2026-11-02 01:08:40</td><td>2026-11-02 01:09:02</td></tr><tr><td>203.0.113.45</td><td>Документационный адрес (демо)</td><td>6</td><td>2026-11-02 01:10:30</td><td>2026-11-02 01:12:20</td></tr><tr><td>192.0.2.44</td><td>Документационный адрес (демо)</td><td>2</td><td>2026-11-02 01:13:10</td><td>2026-11-02 01:13:20</td></tr><tr><td>2001:db8::10</td><td>Документационный адрес (демо)</td><td>1</td><td>2026-11-02 01:14:20</td><td>2026-11-02 01:14:20</td></tr></tbody></table></div>
+<h2>Сигналы и ход расследования</h2>
+<article class="alert"><h3>#3 · Port Scan</h3>
+<p><span class="label">HIGH</span><span class="label">OPEN</span><span class="label">198.51.100.23</span><span class="label">2026-11-02 01:15:20</span></p>
+<p class="description">Соединения с 198.51.100.23 к 10 различным портам за интервал до 10 мин. Порты: 22, 23, 25, 53, 80, 110, 135, 139, 143, 443. Время событий: 2026-11-02 01:08:40 — 2026-11-02 01:08:58.</p>
+<h4>Связанные события</h4>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Время</th><th>IP</th><th>Тип</th><th>Порт назначения</th><th>Сообщение</th></tr></thead><tbody><tr><td>7</td><td>2026-11-02 01:08:40</td><td>198.51.100.23</td><td>NETWORK_CONNECTION</td><td>22</td><td>[DEMO] [UFW BLOCK] SRC=198.51.100.23 DST=10.10.0.5 PROTO=TCP DPT=22</td></tr><tr><td>8</td><td>2026-11-02 01:08:42</td><td>198.51.100.23</td><td>NETWORK_CONNECTION</td><td>23</td><td>[DEMO] [UFW BLOCK] SRC=198.51.100.23 DST=10.10.0.5 PROTO=TCP DPT=23</td></tr><tr><td>9</td><td>2026-11-02 01:08:44</td><td>198.51.100.23</td><td>NETWORK_CONNECTION</td><td>25</td><td>[DEMO] [UFW BLOCK] SRC=198.51.100.23 DST=10.10.0.5 PROTO=TCP DPT=25</td></tr><tr><td>10</td><td>2026-11-02 01:08:46</td><td>198.51.100.23</td><td>NETWORK_CONNECTION</td><td>53</td><td>[DEMO] [UFW BLOCK] SRC=198.51.100.23 DST=10.10.0.5 PROTO=TCP DPT=53</td></tr><tr><td>11</td><td>2026-11-02 01:08:48</td><td>198.51.100.23</td><td>NETWORK_CONNECTION</td><td>80</td><td>[DEMO] [UFW BLOCK] SRC=198.51.100.23 DST=10.10.0.5 PROTO=TCP DPT=80</td></tr><tr><td>12</td><td>2026-11-02 01:08:50</td><td>198.51.100.23</td><td>NETWORK_CONNECTION</td><td>110</td><td>[DEMO] [UFW BLOCK] SRC=198.51.100.23 DST=10.10.0.5 PROTO=TCP DPT=110</td></tr><tr><td>13</td><td>2026-11-02 01:08:52</td><td>198.51.100.23</td><td>NETWORK_CONNECTION</td><td>135</td><td>[DEMO] [UFW BLOCK] SRC=198.51.100.23 DST=10.10.0.5 PROTO=TCP DPT=135</td></tr><tr><td>14</td><td>2026-11-02 01:08:54</td><td>198.51.100.23</td><td>NETWORK_CONNECTION</td><td>139</td><td>[DEMO] [UFW BLOCK] SRC=198.51.100.23 DST=10.10.0.5 PROTO=TCP DPT=139</td></tr><tr><td>15</td><td>2026-11-02 01:08:56</td><td>198.51.100.23</td><td>NETWORK_CONNECTION</td><td>143</td><td>[DEMO] [UFW BLOCK] SRC=198.51.100.23 DST=10.10.0.5 PROTO=TCP DPT=143</td></tr><tr><td>16</td><td>2026-11-02 01:08:58</td><td>198.51.100.23</td><td>NETWORK_CONNECTION</td><td>443</td><td>[DEMO] [UFW BLOCK] SRC=198.51.100.23 DST=10.10.0.5 PROTO=TCP DPT=443</td></tr></tbody></table></div>
+<h4>Заметки аналитика</h4>
+<div class="table-wrap"><table><thead><tr><th>Время</th><th>Заметка</th></tr></thead><tbody><tr><td colspan="2" class="muted">Записей нет</td></tr></tbody></table></div>
+<h4>История статусов</h4>
+<div class="table-wrap"><table><thead><tr><th>Время</th><th>Было</th><th>Стало</th></tr></thead><tbody><tr><td>2026-11-02 01:15:20</td><td>—</td><td>OPEN</td></tr></tbody></table></div>
+</article>
+<article class="alert"><h3>#2 · Login After Failures</h3>
+<p><span class="label">HIGH</span><span class="label">OPEN</span><span class="label">203.0.113.45</span><span class="label">2026-11-02 01:15:20</span></p>
+<p class="description">Успешный вход с 203.0.113.45 после 5 неудачных попыток за интервал до 10 мин. Время событий: 2026-11-02 01:10:30 — 2026-11-02 01:12:20. Требуется проверка учётной записи; это сигнал, а не доказательство компрометации.</p>
+<h4>Связанные события</h4>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Время</th><th>IP</th><th>Тип</th><th>Порт назначения</th><th>Сообщение</th></tr></thead><tbody><tr><td>1</td><td>2026-11-02 01:10:30</td><td>203.0.113.45</td><td>LOGIN_FAILED</td><td>—</td><td>[DEMO] Failed password for analyst from 203.0.113.45 port 51820 ssh2</td></tr><tr><td>2</td><td>2026-11-02 01:10:40</td><td>203.0.113.45</td><td>LOGIN_FAILED</td><td>—</td><td>[DEMO] Failed password for analyst from 203.0.113.45 port 51820 ssh2</td></tr><tr><td>3</td><td>2026-11-02 01:10:50</td><td>203.0.113.45</td><td>LOGIN_FAILED</td><td>—</td><td>[DEMO] Failed password for analyst from 203.0.113.45 port 51820 ssh2</td></tr><tr><td>4</td><td>2026-11-02 01:11:00</td><td>203.0.113.45</td><td>LOGIN_FAILED</td><td>—</td><td>[DEMO] Failed password for analyst from 203.0.113.45 port 51820 ssh2</td></tr><tr><td>5</td><td>2026-11-02 01:11:10</td><td>203.0.113.45</td><td>LOGIN_FAILED</td><td>—</td><td>[DEMO] Failed password for analyst from 203.0.113.45 port 51820 ssh2</td></tr><tr><td>6</td><td>2026-11-02 01:12:20</td><td>203.0.113.45</td><td>LOGIN_SUCCESS</td><td>—</td><td>[DEMO] Accepted password for analyst from 203.0.113.45 port 51820 ssh2</td></tr></tbody></table></div>
+<h4>Заметки аналитика</h4>
+<div class="table-wrap"><table><thead><tr><th>Время</th><th>Заметка</th></tr></thead><tbody><tr><td colspan="2" class="muted">Записей нет</td></tr></tbody></table></div>
+<h4>История статусов</h4>
+<div class="table-wrap"><table><thead><tr><th>Время</th><th>Было</th><th>Стало</th></tr></thead><tbody><tr><td>2026-11-02 01:15:20</td><td>—</td><td>OPEN</td></tr></tbody></table></div>
+</article>
+<article class="alert"><h3>#1 · SSH Brute Force</h3>
+<p><span class="label">HIGH</span><span class="label">OPEN</span><span class="label">203.0.113.45</span><span class="label">2026-11-02 01:15:20</span></p>
+<p class="description">5 неудачных попыток входа с 203.0.113.45 за интервал до 10 мин. Время событий: 2026-11-02 01:10:30 — 2026-11-02 01:11:10.</p>
+<h4>Связанные события</h4>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Время</th><th>IP</th><th>Тип</th><th>Порт назначения</th><th>Сообщение</th></tr></thead><tbody><tr><td>1</td><td>2026-11-02 01:10:30</td><td>203.0.113.45</td><td>LOGIN_FAILED</td><td>—</td><td>[DEMO] Failed password for analyst from 203.0.113.45 port 51820 ssh2</td></tr><tr><td>2</td><td>2026-11-02 01:10:40</td><td>203.0.113.45</td><td>LOGIN_FAILED</td><td>—</td><td>[DEMO] Failed password for analyst from 203.0.113.45 port 51820 ssh2</td></tr><tr><td>3</td><td>2026-11-02 01:10:50</td><td>203.0.113.45</td><td>LOGIN_FAILED</td><td>—</td><td>[DEMO] Failed password for analyst from 203.0.113.45 port 51820 ssh2</td></tr><tr><td>4</td><td>2026-11-02 01:11:00</td><td>203.0.113.45</td><td>LOGIN_FAILED</td><td>—</td><td>[DEMO] Failed password for analyst from 203.0.113.45 port 51820 ssh2</td></tr><tr><td>5</td><td>2026-11-02 01:11:10</td><td>203.0.113.45</td><td>LOGIN_FAILED</td><td>—</td><td>[DEMO] Failed password for analyst from 203.0.113.45 port 51820 ssh2</td></tr></tbody></table></div>
+<h4>Заметки аналитика</h4>
+<div class="table-wrap"><table><thead><tr><th>Время</th><th>Заметка</th></tr></thead><tbody><tr><td colspan="2" class="muted">Записей нет</td></tr></tbody></table></div>
+<h4>История статусов</h4>
+<div class="table-wrap"><table><thead><tr><th>Время</th><th>Было</th><th>Стало</th></tr></thead><tbody><tr><td>2026-11-02 01:15:20</td><td>—</td><td>OPEN</td></tr></tbody></table></div>
+</article>
+<footer>CyberWatch 2.0 · Учебный проект для портфолио SOC-аналитика. Отчёт отражает содержимое локальной базы на момент экспорта. Сигнал требует проверки аналитиком; приложение не блокирует сетевой трафик. HTML автономен и не отправляет данные в сеть.</footer></main></body></html>

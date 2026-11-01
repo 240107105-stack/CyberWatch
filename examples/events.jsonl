@@ -1,0 +1,2 @@
+{"timestamp":"2026-11-01T10:10:00+05:00","source_ip":"192.0.2.77","event_type":"LOGIN_FAILED","severity":"MEDIUM","message":"[EXAMPLE] Failed publickey for guest from 192.0.2.77"}
+{"timestamp":"2026-11-01T10:11:00+05:00","source_ip":"2001:db8::77","event_type":"LOGIN_SUCCESS","severity":"LOW","message":"[EXAMPLE] Accepted publickey for student from 2001:db8::77"}

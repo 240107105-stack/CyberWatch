@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+cyberwatch.db
+.idea/
+.DS_Store
+
+# Local databases, snapshots and build artifacts
+*.db
+*.db-*
+*.bak
+backups/
+build/
+dist/
+
+# Local historical exports and scripts
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+cyberwatch_source.txt
+main_backup.py
+migrate_stage*.py
